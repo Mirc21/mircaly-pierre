@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mircaly Pierre</title>
+<meta name="description" content="Mircaly Pierre is a data center and telecom construction operations professional based in Idaho, with a background in chemistry.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an as-built sheet. Name block up top, focus areas, career as an ordered run, drawing title block as the footer. */
+:root{
+  --paper:#f3f5f6;
+  --sheet:#ffffff;
+  --ink:#16232b;
+  --muted:#55656f;
+  --rule:#d3dbe0;
+  --aqua:#00797d;      /* OM3/OM4 multimode jacket */
+  --aqua-soft:#dcefef;
+  --sm-yellow:#c99a00; /* single-mode jacket */
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f171c; --sheet:#152129; --ink:#e6edf0; --muted:#9aaab3; --rule:#2a3a44;
+    --aqua:#4cc4c2; --aqua-soft:#16353a; --sm-yellow:#e8bf3a; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f171c; --sheet:#152129; --ink:#e6edf0; --muted:#9aaab3; --rule:#2a3a44;
+  --aqua:#4cc4c2; --aqua-soft:#16353a; --sm-yellow:#e8bf3a; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--paper); color:var(--ink);
+  font:16px/1.6 var(--body);
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:clamp(24px,5vw,56px);
+}
+.sheet{max-width:960px; margin:0 auto; background:var(--sheet); border:1px solid var(--rule); display:grid}
+section,header,footer{padding:clamp(20px,4vw,44px)}
+section+section, header+section{border-top:1px solid var(--rule)}
+
+.fiber{display:flex; gap:6px; margin-bottom:22px}
+.fiber span{height:6px; width:44px; border-radius:3px; background:var(--aqua)}
+.fiber span:nth-child(2){background:var(--sm-yellow); width:22px}
+.fiber span:nth-child(3){background:var(--rule); width:12px}
+h1{
+  font-family:var(--display); font-weight:800; font-variation-settings:"wdth" 72;
+  font-size:clamp(2.75rem,9vw,5.5rem); line-height:.92; letter-spacing:-.01em;
+  margin:0; text-wrap:balance;
+}
+.role{font-family:var(--display); font-weight:600; font-size:clamp(1.1rem,2.6vw,1.4rem); color:var(--aqua); margin:14px 0 0}
+.lede{max-width:62ch; margin:18px 0 0}
+.meta{display:flex; flex-wrap:wrap; gap:8px 22px; margin-top:22px; font:500 .85rem/1.4 var(--mono); color:var(--muted)}
+.meta a{color:var(--aqua); text-decoration-thickness:1px; text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--aqua); outline-offset:3px}
+
+.label{
+  font:600 .75rem/1 var(--mono); letter-spacing:.14em; text-transform:uppercase;
+  color:var(--muted); margin:0 0 18px; display:flex; align-items:center; gap:10px;
+}
+.label::after{content:""; flex:1; height:1px; background:var(--rule)}
+h2{font-family:var(--display); font-weight:700; font-variation-settings:"wdth" 90; font-size:1.6rem; line-height:1.15; margin:0 0 6px; text-wrap:balance}
+
+.focus{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:24px 32px}
+.focus div{min-width:0; border-top:3px solid var(--aqua); padding-top:12px}
+.focus h3{font-family:var(--display); font-weight:700; font-variation-settings:"wdth" 92; font-size:1.1rem; margin:0 0 6px}
+.focus p{margin:0; color:var(--muted)}
+
+.run{list-style:none; margin:0; padding:0; display:grid}
+.run li{display:grid; grid-template-columns:150px 1fr; gap:6px 24px; padding:18px 0; border-bottom:1px solid var(--rule)}
+.run li:last-child{border-bottom:0}
+.run .org{font-family:var(--display); font-weight:700; font-variation-settings:"wdth" 95; font-size:1.05rem; line-height:1.3}
+.run .org span{display:block; font:500 .75rem/1.4 var(--mono); color:var(--muted); letter-spacing:.04em; margin-top:4px}
+.run p{margin:0; min-width:0; max-width:64ch}
+@media (max-width:560px){ .run li{grid-template-columns:1fr} }
+
+.two{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:28px 40px}
+.two > div{min-width:0}
+.two p{margin:0; max-width:60ch}
+.cta{display:inline-block; margin-top:16px; padding:12px 18px; background:var(--aqua); color:var(--sheet); text-decoration:none; font:600 .95rem/1 var(--body); border-radius:3px}
+
+footer{border-top:2px solid var(--ink); padding-block:0; padding-inline:0}
+.tb{display:grid; grid-template-columns:2fr 1fr 1fr; font:500 .75rem/1.4 var(--mono); color:var(--muted)}
+.tb div{padding:12px 16px; border-right:1px solid var(--rule); min-width:0}
+.tb div:last-child{border-right:0}
+.tb b{display:block; font-weight:500; color:var(--ink); font-size:.82rem; letter-spacing:.02em; margin-top:2px}
+@media (max-width:560px){ .tb{grid-template-columns:1fr} .tb div{border-right:0; border-bottom:1px solid var(--rule)} .tb div:last-child{border-bottom:0} }
+</style>
+<meta property="og:title" content="Mircaly Pierre">
+<meta property="og:type" content="profile">
+<meta property="og:description" content="Data center and telecom construction operations, Idaho.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Mircaly Pierre",
+"jobTitle":"Data Center & Telecom Construction Operations",
+"address":{"@type":"PostalAddress","addressRegion":"ID","addressCountry":"US"},
+"alumniOf":{"@type":"CollegeOrUniversity","name":"Valdosta State University"},
+"knowsAbout":["Data center construction","Structured cabling","Fiber optics","Telecommunications","Construction safety"],
+"sameAs":["https://www.linkedin.com/in/mircaly-pierre-7293a3bb/"]}
+</script>
+<style>body{margin:0}</style>
+</head>
+<body>
+
+<main class="sheet">
+  <header>
+    <div class="fiber" aria-hidden="true"><span></span><span></span><span></span></div>
+    <h1>Mircaly Pierre</h1>
+    <p class="role">Data Center &amp; Telecom Construction Operations</p>
+    <p class="lede">I work on the field side of mission-critical infrastructure, from rooftop wireless sites to large data center buildings. I care about safe crews, clear communication, and buildings that are ready to run when they're handed over.</p>
+    <div class="meta">
+      <span>Idaho, United States</span>
+      <a href="https://www.linkedin.com/in/mircaly-pierre-7293a3bb/" rel="me">LinkedIn</a>
+    </div>
+  </header>
+
+  <section aria-labelledby="focus">
+    <p class="label" id="focus">Focus areas</p>
+    <div class="focus">
+      <div><h3>Data center construction</h3><p>Hyperscale buildings, MDF and data hall turnover, structured cabling.</p></div>
+      <div><h3>Fiber &amp; telecom</h3><p>High-count fiber, small cells, and rooftop and tower wireless sites.</p></div>
+      <div><h3>Safety &amp; field operations</h3><p>Crew planning, safety leadership, and steady schedule execution.</p></div>
+      <div><h3>Reporting</h3><p>Clear executive summaries and documentation for project leadership.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="career">
+    <p class="label" id="career">Career path, most recent first</p>
+    <ol class="run">
+      <li>
+        <div class="org">E2 Optics<span>Data centers</span></div>
+        <p>Construction operations on hyperscale and AI data center buildings, including work in Ohio and Idaho.</p>
+      </li>
+      <li>
+        <div class="org">Crown Castle<span>Small cells · South Florida</span></div>
+        <p>Supported T-Mobile's small cell launch across South Florida.</p>
+      </li>
+      <li>
+        <div class="org">American Tower<span>Multi-carrier sites</span></div>
+        <p>Worked with every major carrier and decommissioned rooftop sites during carrier mergers.</p>
+      </li>
+      <li>
+        <div class="org">T-Mobile<span>Rooftop &amp; tower</span></div>
+        <p>Managed rooftop and tower modifications for wireless network upgrades.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="about">
+    <p class="label" id="about">Background</p>
+    <div class="two">
+      <div>
+        <h2>Chemist turned builder</h2>
+        <p>I earned a chemistry degree at Valdosta State University with a focus on thermodynamics, then moved into telecom. That training still shapes how I work: measure first, document carefully, and plan for safety from the start.</p>
+      </div>
+      <div>
+        <h2>Get in touch</h2>
+        <p>The best way to reach me is through LinkedIn.</p>
+        <a class="cta" href="https://www.linkedin.com/in/mircaly-pierre-7293a3bb/" rel="me">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="tb">
+      <div>Prepared by<b>Mircaly Pierre</b></div>
+      <div>Discipline<b>Construction Ops</b></div>
+      <div>Location<b>Idaho, USA</b></div>
+    </div>
+  </footer>
+</main>
+
+</body>
+</html>
